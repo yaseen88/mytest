@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+<div style="width:50%; margin:0 auto;">
+<form id="form" action="" name="form" method="post">
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="">
+    <br><br>
+    <input type="submit" value="Submit" onClick="formProcessing(this.form)">
+  </fieldset>
+</form>
+</div>
+
+
+
+<script>
+  function formProcessing(form){
+var fName = form.firstname.value;
+var lName = form.lastname.value;
+alert("Thank you "+fName+" "+lName+" for filling the form");
+
+  }
+
+  </script>
+</body>
+</html>
