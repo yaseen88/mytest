@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <body>
-  
+
 <div style="width:50%; margin:0 auto;">
-<form id="form" action="" name="form" method="post">
-  <fieldset>
-    <legend>Personal information:</legend>
-    First name:<br>
-    <input type="text" name="firstname" value="">
-    <br>
-    Last name:<br>
-    <input type="text" name="lastname" value="">
-    <br><br>
+<form action="" name="form" method="post">
+  <fieldset style="position:relative;">
+    <fieldset style="width:44.5%; float:left; margin-bottom:10px;">
+        <legend>Personal information:</legend>
+        First name:<br>
+        <input type="text" name="firstname" value="">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="">
+        <br><br>
+      </fieldset>
+    <fieldset style="width:44.5%; float:left;">
+        <legend>Contact information:</legend>
+        First name:<br>
+        <input type="email" name="phone" value="">
+        <br>
+        Last name:<br>
+        <input type="phone" name="email" value="">
+        <br><br>
+      </fieldset>
+      <div style="clear:both;">
     <input type="submit" value="Submit" onClick="formProcessing(this.form)">
   </fieldset>
 </form>
@@ -23,7 +35,9 @@
   function formProcessing(form){
 var fName = form.firstname.value;
 var lName = form.lastname.value;
-alert("Thank you "+fName+" "+lName+" for filling the form");
+var iPhone = form.firstname.value;
+var iEmail = form.lastname.value;
+alert("Thank you "+fName+" "+lName+" for filling the form\n\nWe will call you on "+iPhone+" and mail you on "+iEmail);
 
   }
 
